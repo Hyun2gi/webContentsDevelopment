@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        table {
+            font-family: sans-serif;
+            border-collapse:collapse;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 100px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: green;
+            color:white;
+        }
+        
+        input {
+            width: 100px;
+        }
+    </style>
+    
+    <script>
+        function add_row() {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            
+            var c = Number(x)*Number(y);
+            
+            document.getElementById("tb1").innerHTML += "<tr> <td>" + x + "</td> <td>" + y + "</td> <td>" + c +"</td> </tr>";
+        }
+    
+    </script>
+</head>
+<body>
+    <h2> Multiplication Table </h2>
+    
+    <input id="x"><input id="y">
+    <button onclick="add_row()">Add</button>  <br> <br>
+    
+    <table id="tb1">
+        <tr> <th>x</th>   <th>y</th> <th>x * y</th> </tr>
+    </table>
+</body>
+</html>
