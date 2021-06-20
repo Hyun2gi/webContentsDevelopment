@@ -1,0 +1,81 @@
+h1{
+    text-align:center;
+    margin-bottom: 0px;
+    font-size: 50px;
+    padding-top:20px;
+    color:white;
+    font-family: 'Staatliches', cursive;
+}
+
+
+/* 리셋 CSS */
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+body{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+}
+
+.slidebox {max-width:80% ;margin:0 auto;position:relative; margin-top:0px;  }
+.slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#fff;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+.slidebox .slidelist .slideitem > a img {max-width:100%;}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:-50px;background:#E065CB url('left.png') center center / 50% no-repeat;}
+.slidebox .slide-control [class*="control"] label.next {right:-50px;background:#E065CB url('right.png') center center / 50% no-repeat;}
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
+#slide04:checked ~ .slide-control .control04 {display:block;}
+
+
+
+#whole {
+    border:inline-block;
+    margin-top:0px;
+}
+
+#menu{
+    margin-left: 10%;
+    margin-right:10%;
+    height:50px;
+    border-bottom: 3px solid white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: 2px solid white;
+}
+
+.menubar{
+    
+}
+
+.menubar:hover{
+    opacity: 0.5;
+}
+
+a {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align:center;
+    text-decoration: none;
+    color:white;
+}
+
+#youtube{
+    grid-column: 2;
+}
+
+
+#layout {display:grid; grid-template-rows: 8% auto;}
